@@ -1,0 +1,212 @@
+html {
+    overflow: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    /* background-color: #3c6e71; */
+    background-color: #d9d9d9;
+
+    padding: 10px 20px;
+
+    position: fixed;
+
+    top: 0;
+
+    z-index: 999;
+}
+
+.navbar {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .message-user {
+    text-align: center;
+}
+
+.logo  {
+    width: 30%; 
+
+    /* background-color: #555; */
+
+}
+.logo img {
+    width: 100%;
+}
+
+.hamburguer {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 0;
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburguer:after {
+    content: "";
+
+    position: absolute;
+    top: 35%;
+    left: -80%;
+    width: 150%;
+    height: 10%;
+    border-radius: 5px;
+    background-color: #3c6e71;
+
+}
+.hamburguer:before {
+    content: "";
+
+    position: absolute;
+    top: 55%;
+    left: -30%;
+    width: 100%;
+    height: 10%;
+    border-radius: 5px;
+    background-color: #3c6e71;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.menu li{
+    margin-left: 10px;
+
+}
+
+.menu li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    color:#353535;
+    transition: 0.5s ease;
+}
+
+.menu li a img {
+    height: auto;
+    width: 30px;
+
+    padding: 10px;
+}
+
+.menu li a:hover {
+    color: gray;
+}
+
+main {
+    margin-top: 8rem;
+    width: 100%;
+}
+
+h2 {
+    max-width: 70%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+table {
+    width: 90%;
+    max-width: 800px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+table tr {
+    background-color: #ccc;
+}
+
+table td {
+    width: 50%;
+    padding: 5px;
+}
+
+.filter {
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 12px;
+}
+
+input {
+    padding: 5px;
+}
+
+.search {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: greenyellow;
+    /* margin-left: 0.2rem; */
+    transition: 1s ease;
+}
+.search img{
+    max-width: 20px;
+}
+
+.filter form {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: keep-all;
+
+}
+
+.filter form input {
+    margin: 0 0.5rem;
+    outline: auto;
+}
+
+@media screen and (max-width: 980px) {
+    .hamburguer {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        margin: 0;
+        background-color: #284b63;
+        width: 100%;
+        max-width: 250px;
+        padding: 100px 20px;
+        flex-direction: column;
+
+        transition: 0.5s ease;
+
+    }
+
+    .active {
+        right: 0;
+    }
+
+    .menu li a {
+       
+        color:#fff;
+        
+    }
+}
