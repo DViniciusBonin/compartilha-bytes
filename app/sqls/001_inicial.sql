@@ -1,4 +1,4 @@
-CREATE DATABASE compartilhabytes COLLATE 'utf8_unicode_ci';
+-- CREATE DATABASE compartilhabytes COLLATE 'utf8_unicode_ci';
 
 use compartilhabytes;
 

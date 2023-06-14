@@ -1,0 +1,23 @@
+version: '3'
+services:
+ app:
+    build: .
+    ports:
+      - 80:80
+    volumes:
+      - .:/var/www/html/web3
+      - ./apache/apache.conf:/etc/apache2/sites-available/000-default.conf
+    depends_on:
+      - database
+ database:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: compartilhabytes
+      MYSQL_USER: compartilhabytes
+      MYSQL_PASSWORD: root
+    volumes:
+      - ./app/sqls/001_inicial.sql:/docker-entrypoint-initdb.d/db.sql
+    ports:
+      - 3306:3306

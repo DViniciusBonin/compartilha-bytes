@@ -2,9 +2,9 @@
 
 $banco = [
     'driver' => 'mysql',
-    'servidor' => 'localhost',
+    'servidor' => 'database',
     'porta' => '3306',
     'banco' => 'compartilhabytes',
-    'usuario' => 'root',
+    'usuario' => 'compartilhabytes',
     'senha' => 'root',
 ];

@@ -3,7 +3,7 @@
 const APLICACAO_NOME = 'Bonin drive';
 
 // Se a URL_RAIZ mudar, verifique arquivo .htaccess
-const URL_RAIZ = '/web3/app/';
+const URL_RAIZ = '/'; //'/web3/app/';
 
 // Os caminhos sempre devem terminar com '/'
 

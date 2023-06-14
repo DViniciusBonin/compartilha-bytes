@@ -73,7 +73,6 @@ class ComentarioControlador extends Controlador
         $this->verificarLogado();
         $comentario = Comentario::buscarId($id);
         if ($comentario->getUserId() == $this->getUsuario()->getId()) {
-            echo "entrei aqui";
             $comentario->destruir();
             DW3Sessao::setFlash('mensagemFlash', 'Comentário destruido.');
         } else {
@@ -83,5 +82,4 @@ class ComentarioControlador extends Controlador
         }
         $this->redirecionar(URL_RAIZ . 'arquivos');
     }
-           
 }
